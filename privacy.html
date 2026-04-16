@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Privacy Policy | Yada Studio</title>
+    <link rel="icon" href="logo.png">
+
+    <style>
+        :root {
+            --bg-color: #F2F2F7;
+            --text-primary: #1C1C1E;
+            --text-secondary: #3C3C43;
+            --card-bg: #FFFFFF;
+            --accent-color: #007AFF;
+            --border-color: #E5E5EA;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --radius: 18px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #000000;
+                --text-primary: #FFFFFF;
+                --text-secondary: #EBEBF5;
+                --card-bg: #1C1C1E;
+                --accent-color: #0A84FF;
+                --border-color: #38383A;
+                --shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 750px;
+            padding: 40px 0;
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background-color: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .header {
+            text-align: left;
+            margin-bottom: 30px;
+            padding-left: 10px;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+
+        p.date {
+            font-size: 15px;
+            color: var(--text-secondary);
+            opacity: 0.7;
+            margin: 0;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        h2:first-child { margin-top: 0; }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        ul { padding-left: 20px; margin-bottom: 20px; }
+        li { font-size: 16px; line-height: 1.6; color: var(--text-secondary); margin-bottom: 8px; }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 17px;
+            padding-left: 10px;
+        }
+
+        .back-link:before { content: "← "; }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            opacity: 0.6;
+        }
+
+        .content-section { display: none; }
+        .content-section.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <a href="index.html" class="back-link" id="backBtn">Back to Home</a>
+
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="setLang('tr')">Türkçe</button>
+            <button class="lang-btn" onclick="setLang('en')">English</button>
+            <button class="lang-btn" onclick="setLang('de')">Deutsch</button>
+        </div>
+
+        <!-- TURKISH CONTENT -->
+        <div id="tr" class="content-section active">
+            <div class="header">
+                <h1>Gizlilik Politikası</h1>
+                <p class="date">Yürürlük Tarihi: 16 Nisan 2026</p>
+            </div>
+            <div class="card">
+                <p><strong>Yada Studio</strong>'da gizliliğiniz bizim en önemli önceliğimizdir. Yada Studio'yu "Önce Gizlilik" prensibiyle tasarladık; yani size yüksek kalitede ekran görüntüsü oluşturma ve App Store senkronizasyonu deneyimi sunmak için yalnızca gerekli olan minimum bilgiyi topluyoruz.</p>
+
+                <h2>1. Sıfır Takip Taahhüdü</h2>
+                <p>Sizi reklam amaçlı takip etmiyoruz. Verilerinizi reklam verenlerle veya veri simsarlarıyla paylaşmadığımız için Uygulama Takip Şeffaflığı (ATT) özelliğini kullanmıyoruz. Yada Studio içindeki aktiviteleriniz size özel kalır.</p>
+
+                <h2>2. Toplanan Bilgiler ve Nedenleri</h2>
+                
+                <h3>a. App Store Connect Kimlik Bilgileri</h3>
+                <p>"App Store'a Senkronize Et" özelliğini kullanmak için App Store Connect API Issuer ID, Key ID ve Özel Anahtarınızı sağlarsınız.</p>
+                <ul>
+                    <li><strong>Kullanım:</strong> Bu bilgiler yalnızca Apple'ın resmi API'si ile iletişim kurmak için kullanılır.</li>
+                    <li><strong>Güvenlik:</strong> Cihazınızın güvenli Keychain (Anahtar Zinciri) alanında saklanır. Sunucularımıza veya üçüncü taraflara asla gönderilmez.</li>
+                </ul>
+
+                <h3>b. Tanımlayıcılar (Hesap Senkronizasyonu)</h3>
+                <p>Kişisel <strong>iCloud</strong> hesabınız üzerinden senkronize edilen benzersiz, anonim bir Kullanıcı Kimliği oluştururuz.</p>
+                <ul>
+                    <li><strong>Amaç:</strong> Bu, Pro durumunuzun, kredilerinizin ve proje meta verilerinizin iPhone, iPad ve Mac cihazlarınız arasında senkronize kalmasını sağlar.</li>
+                </ul>
+
+                <h3>c. Yapay Zeka Servisleri (Arka Planlar ve Meta Veriler)</h3>
+                <p>AI özelliklerini (Arka Plan Oluşturucu veya Meta Veri Asistanı) kullandığınızda:</p>
+                <ul>
+                    <li><strong>Gönderilen Veriler:</strong> Güvenli işleme sunucularımıza (Google Gemini AI destekli) yalnızca metin komutunuzu ve Kullanıcı Kimliğinizi göndeririz.</li>
+                    <li><strong>Fotoğraf Yükleme Yok:</strong> Fotoğraflarınızı veya ekran görüntülerinizi AI sunucularımıza yüklemiyoruz. AI, tamamen sağladığınız metin açıklamalarına dayanarak içerik üretir.</li>
+                </ul>
+
+                <h3>d. Satın Alma Geçmişi</h3>
+                <p>Abonelikleri yönetmek için <strong>RevenueCat</strong> kullanıyoruz. RevenueCat, Premium erişiminizin aktif olduğundan emin olmak için Apple'dan işlem tanımlayıcılarını toplar. Bu veriler anonim Kullanıcı Kimliğinize bağlıdır.</p>
+
+                <h3>e. Tanılama ve Analiz</h3>
+                <p>Uygulama kararlılığını artırmak için <strong>Firebase (Google)</strong> kullanıyoruz:</p>
+                <ul>
+                    <li><strong>Crashlytics:</strong> Uygulama çökerse, hatayı düzeltmemize yardımcı olacak teknik bir günlük gönderilir.</li>
+                    <li><strong>Analizler:</strong> Hangi özelliklerin daha çok kullanıldığına dair anonim bilgiler toplarız.</li>
+                </ul>
+
+                <h2>3. Veri Tutma ve Kontrol</h2>
+                <p><strong>Firestore Veritabanı:</strong> Anonim kredi bakiyenizi ve proje meta verilerinizi cihazlar arası senkronizasyon için güvenli bir veritabanında saklıyoruz. Verilerinizin silinmesini istediğiniz zaman talep edebilirsiniz.</p>
+
+                <h2>4. Seçim ve Rıza</h2>
+                <ul>
+                    <li><strong>Fotoğraf Kitaplığı:</strong> Erişim yalnızca bir arka planı içe aktarmayı veya bitmiş bir tasarımı dışa aktarmayı seçtiğinizde kullanılır.</li>
+                    <li><strong>App Store Connect:</strong> API kimlik bilgilerinizi istediğiniz zaman uygulamadan kaldırabilirsiniz.</li>
+                </ul>
+
+                <h2>5. İletişim</h2>
+                <p>Sorularınız için: <a href="mailto:yadatechnologiesofficial@gmail.com" style="color: var(--accent-color); text-decoration: none;">yadatechnologiesofficial@gmail.com</a></p>
+            </div>
+        </div>
+
+        <!-- ENGLISH CONTENT -->
+        <div id="en" class="content-section">
+            <div class="header">
+                <h1>Privacy Policy</h1>
+                <p class="date">Effective Date: April 16, 2026</p>
+            </div>
+            <div class="card">
+                <p>At <strong>Yada Studio</strong>, your privacy is our top priority. We have designed Yada Studio to be a "Privacy First" application, meaning we collect only the minimum information necessary to provide you with a high-quality screenshot creation and App Store synchronization experience.</p>
+
+                <h2>1. Zero Tracking Commitment</h2>
+                <p>We <strong>do not</strong> track you for advertising purposes. We do not use App Tracking Transparency (ATT) because we do not share your data with advertisers or data brokers. Your activity within Yada Studio remains private to you.</p>
+
+                <h2>2. Information We Collect and Why</h2>
+                
+                <h3>a. App Store Connect Credentials</h3>
+                <p>To use the "Sync to App Store" feature, you provide your App Store Connect API Issuer ID, Key ID, and Private Key.</p>
+                <ul>
+                    <li><strong>Usage:</strong> These credentials are used exclusively to communicate with Apple's official API.</li>
+                    <li><strong>Security:</strong> They are stored securely on your device's <strong>Keychain</strong>. They are <strong>never</strong> sent to our servers or any third parties.</li>
+                </ul>
+
+                <h3>b. Identifiers (Account Sync)</h3>
+                <p>We generate a unique, anonymous User ID which is synced via your personal <strong>iCloud</strong> account.</p>
+                <ul>
+                    <li><strong>Purpose:</strong> This allows your pro status, credits, and project metadata to stay synchronized across your iPhone, iPad, and Mac.</li>
+                </ul>
+
+                <h3>c. AI Services (Backgrounds & Metadata)</h3>
+                <p>When you use AI features (Background Generator or Metadata Assistant):</p>
+                <ul>
+                    <li><strong>Data Sent:</strong> We only send your text prompt and User ID to our secure processing servers (powered by <strong>Google Gemini AI</strong>).</li>
+                    <li><strong>No Photo Uploads:</strong> We <strong>do not</strong> upload your photos or screenshots to our AI servers. The AI generates images and content based exclusively on the text descriptions you provide.</li>
+                </ul>
+
+                <h3>d. Purchase History</h3>
+                <p>We use <strong>RevenueCat</strong> to manage subscriptions. RevenueCat collects transaction identifiers from Apple to ensure your premium access is active. This data is linked to your anonymous User ID.</p>
+
+                <h3>e. Diagnostics & Analytics</h3>
+                <p>We use <strong>Firebase (Google)</strong> to improve app stability:</p>
+                <ul>
+                    <li><strong>Crashlytics:</strong> If the app crashes, it sends a technical log to help us fix the bug.</li>
+                    <li><strong>Analytics:</strong> We collect anonymous information about which features are most used to help us improve the app.</li>
+                </ul>
+
+                <h2>3. Data Retention and Control</h2>
+                <p><strong>Firestore Database:</strong> We store your anonymous credit balance and project metadata in a secure database to enable cross-device sync. You can request the deletion of your account and associated data at any time by contacting us.</p>
+
+                <h2>4. Choice and Consent</h2>
+                <ul>
+                    <li><strong>Photo Library:</strong> Access is only used when you choose to import a background or export a finished design.</li>
+                    <li><strong>App Store Connect:</strong> You can remove your API credentials from the app at any time, which will immediately stop all synchronization features.</li>
+                </ul>
+
+                <h2>5. Contact</h2>
+                <p>If you have any questions regarding this privacy policy or your data, please reach out to us at: <a href="mailto:yadatechnologiesofficial@gmail.com" style="color: var(--accent-color); text-decoration: none;">yadatechnologiesofficial@gmail.com</a></p>
+            </div>
+        </div>
+
+        <!-- GERMAN CONTENT -->
+        <div id="de" class="content-section">
+            <div class="header">
+                <h1>Datenschutzerklärung</h1>
+                <p class="date">Gültig ab: 16. April 2026</p>
+            </div>
+            <div class="card">
+                <p>Bei <strong>Yada Studio</strong> hat Ihre Privatsphäre höchste Priorität. Wir haben Yada Studio als "Privacy First"-Anwendung entwickelt.</p>
+
+                <h2>1. Kein Tracking-Versprechen</h2>
+                <p>Wir verfolgen Sie nicht zu Werbezwecken. Wir geben Ihre Daten nicht an Werbetreibende weiter.</p>
+
+                <h2>2. Informationen, die wir sammeln</h2>
+                <h3>a. App Store Connect Zugangsdaten</h3>
+                <p>Diese werden ausschließlich lokal im <strong>Keychain</strong> Ihres Geräts gespeichert.</p>
+                
+                <h3>b. Identifikatoren</h3>
+                <p>Eine anonyme Benutzer-ID wird über Ihren <strong>iCloud</strong>-Account synchronisiert.</p>
+
+                <h3>c. KI-Dienste</h3>
+                <p>Wir senden nur Text-Prompts an <strong>Google Gemini AI</strong>. Wir laden keine Fotos auf KI-Server hoch.</p>
+
+                <h2>3. Kontakt</h2>
+                <p>Fragen? Kontaktieren Sie uns unter: <a href="mailto:yadatechnologiesofficial@gmail.com" style="color: var(--accent-color); text-decoration: none;">yadatechnologiesofficial@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Yada Studio. All rights reserved.</p>
+        </div>
+
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.querySelectorAll('.content-section').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+            const buttons = document.querySelectorAll('.lang-btn');
+            if (lang === 'tr') buttons[0].classList.add('active');
+            if (lang === 'en') buttons[1].classList.add('active');
+            if (lang === 'de') buttons[2].classList.add('active');
+
+            const backBtn = document.getElementById('backBtn');
+            if(lang === 'tr') backBtn.innerText = "Ana Sayfaya Dön";
+            else if(lang === 'de') backBtn.innerText = "Zurück";
+            else backBtn.innerText = "Back to Home";
+        }
+
+        window.onload = function() {
+            const userLang = navigator.language || navigator.userLanguage; 
+            if (userLang.startsWith('de')) setLang('de');
+            else if (userLang.startsWith('tr')) setLang('tr');
+            else setLang('en');
+        };
+    </script>
+</body>
+</html>
