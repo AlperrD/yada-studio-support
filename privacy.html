@@ -8,6 +8,7 @@
 
     <style>
         :root {
+            /* Light Mode Variables */
             --bg-color: #F2F2F7;
             --text-primary: #1C1C1E;
             --text-secondary: #3C3C43;
@@ -20,6 +21,7 @@
 
         @media (prefers-color-scheme: dark) {
             :root {
+                /* Dark Mode Variables */
                 --bg-color: #000000;
                 --text-primary: #FFFFFF;
                 --text-secondary: #EBEBF5;
@@ -49,6 +51,7 @@
             padding: 40px 0;
         }
 
+        /* Language Switcher */
         .lang-switch {
             display: flex;
             justify-content: center;
@@ -74,6 +77,7 @@
             border-color: var(--accent-color);
         }
 
+        /* Hero / Header */
         .header {
             text-align: left;
             margin-bottom: 30px;
@@ -94,6 +98,7 @@
             margin: 0;
         }
 
+        /* Content Card */
         .card {
             background-color: var(--card-bg);
             border-radius: var(--radius);
@@ -168,74 +173,17 @@
         
         <a href="index.html" class="back-link" id="backBtn">Back to Home</a>
 
+        <!-- Language Switcher -->
         <div class="lang-switch">
             <button class="lang-btn active" onclick="setLang('tr')">Türkçe</button>
             <button class="lang-btn" onclick="setLang('en')">English</button>
             <button class="lang-btn" onclick="setLang('de')">Deutsch</button>
         </div>
 
-        <!-- TURKISH CONTENT -->
-        <div id="tr" class="content-section active">
-            <div class="header">
-                <h1>Gizlilik Politikası</h1>
-                <p class="date">Yürürlük Tarihi: 16 Nisan 2026</p>
-            </div>
-            <div class="card">
-                <p><strong>Yada Studio</strong>'da gizliliğiniz bizim en önemli önceliğimizdir. Yada Studio'yu "Önce Gizlilik" prensibiyle tasarladık; yani size yüksek kalitede ekran görüntüsü oluşturma ve App Store senkronizasyonu deneyimi sunmak için yalnızca gerekli olan minimum bilgiyi topluyoruz.</p>
-
-                <h2>1. Sıfır Takip Taahhüdü</h2>
-                <p>Sizi reklam amaçlı takip etmiyoruz. Verilerinizi reklam verenlerle veya veri simsarlarıyla paylaşmadığımız için Uygulama Takip Şeffaflığı (ATT) özelliğini kullanmıyoruz. Yada Studio içindeki aktiviteleriniz size özel kalır.</p>
-
-                <h2>2. Toplanan Bilgiler ve Nedenleri</h2>
-                
-                <h3>a. App Store Connect Kimlik Bilgileri</h3>
-                <p>"App Store'a Senkronize Et" özelliğini kullanmak için App Store Connect API Issuer ID, Key ID ve Özel Anahtarınızı sağlarsınız.</p>
-                <ul>
-                    <li><strong>Kullanım:</strong> Bu bilgiler yalnızca Apple'ın resmi API'si ile iletişim kurmak için kullanılır.</li>
-                    <li><strong>Güvenlik:</strong> Cihazınızın güvenli Keychain (Anahtar Zinciri) alanında saklanır. Sunucularımıza veya üçüncü taraflara asla gönderilmez.</li>
-                </ul>
-
-                <h3>b. Tanımlayıcılar (Hesap Senkronizasyonu)</h3>
-                <p>Kişisel <strong>iCloud</strong> hesabınız üzerinden senkronize edilen benzersiz, anonim bir Kullanıcı Kimliği oluştururuz.</p>
-                <ul>
-                    <li><strong>Amaç:</strong> Bu, Pro durumunuzun, kredilerinizin ve proje meta verilerinizin iPhone, iPad ve Mac cihazlarınız arasında senkronize kalmasını sağlar.</li>
-                </ul>
-
-                <h3>c. Yapay Zeka Servisleri (Arka Planlar ve Meta Veriler)</h3>
-                <p>AI özelliklerini (Arka Plan Oluşturucu veya Meta Veri Asistanı) kullandığınızda:</p>
-                <ul>
-                    <li><strong>Gönderilen Veriler:</strong> Güvenli işleme sunucularımıza (Google Gemini AI destekli) yalnızca metin komutunuzu ve Kullanıcı Kimliğinizi göndeririz.</li>
-                    <li><strong>Fotoğraf Yükleme Yok:</strong> Fotoğraflarınızı veya ekran görüntülerinizi AI sunucularımıza yüklemiyoruz. AI, tamamen sağladığınız metin açıklamalarına dayanarak içerik üretir.</li>
-                </ul>
-
-                <h3>d. Satın Alma Geçmişi</h3>
-                <p>Abonelikleri yönetmek için <strong>RevenueCat</strong> kullanıyoruz. RevenueCat, Premium erişiminizin aktif olduğundan emin olmak için Apple'dan işlem tanımlayıcılarını toplar. Bu veriler anonim Kullanıcı Kimliğinize bağlıdır.</p>
-
-                <h3>e. Tanılama ve Analiz</h3>
-                <p>Uygulama kararlılığını artırmak için <strong>Firebase (Google)</strong> kullanıyoruz:</p>
-                <ul>
-                    <li><strong>Crashlytics:</strong> Uygulama çökerse, hatayı düzeltmemize yardımcı olacak teknik bir günlük gönderilir.</li>
-                    <li><strong>Analizler:</strong> Hangi özelliklerin daha çok kullanıldığına dair anonim bilgiler toplarız.</li>
-                </ul>
-
-                <h2>3. Veri Tutma ve Kontrol</h2>
-                <p><strong>Firestore Veritabanı:</strong> Anonim kredi bakiyenizi ve proje meta verilerinizi cihazlar arası senkronizasyon için güvenli bir veritabanında saklıyoruz. Verilerinizin silinmesini istediğiniz zaman talep edebilirsiniz.</p>
-
-                <h2>4. Seçim ve Rıza</h2>
-                <ul>
-                    <li><strong>Fotoğraf Kitaplığı:</strong> Erişim yalnızca bir arka planı içe aktarmayı veya bitmiş bir tasarımı dışa aktarmayı seçtiğinizde kullanılır.</li>
-                    <li><strong>App Store Connect:</strong> API kimlik bilgilerinizi istediğiniz zaman uygulamadan kaldırabilirsiniz.</li>
-                </ul>
-
-                <h2>5. İletişim</h2>
-                <p>Sorularınız için: <a href="mailto:yadatechnologiesofficial@gmail.com" style="color: var(--accent-color); text-decoration: none;">yadatechnologiesofficial@gmail.com</a></p>
-            </div>
-        </div>
-
         <!-- ENGLISH CONTENT -->
         <div id="en" class="content-section">
             <div class="header">
-                <h1>Privacy Policy</h1>
+                <h1>Privacy Policy for Yada Studio</h1>
                 <p class="date">Effective Date: April 16, 2026</p>
             </div>
             <div class="card">
@@ -254,7 +202,7 @@
                 </ul>
 
                 <h3>b. Identifiers (Account Sync)</h3>
-                <p>We generate a unique, anonymous User ID which is synced via your personal <strong>iCloud</strong> account.</p>
+                <p>We generate a unique, anonymous User ID (e.g., user_12345) which is synced via your personal <strong>iCloud</strong> account.</p>
                 <ul>
                     <li><strong>Purpose:</strong> This allows your pro status, credits, and project metadata to stay synchronized across your iPhone, iPad, and Mac.</li>
                 </ul>
@@ -273,11 +221,12 @@
                 <p>We use <strong>Firebase (Google)</strong> to improve app stability:</p>
                 <ul>
                     <li><strong>Crashlytics:</strong> If the app crashes, it sends a technical log to help us fix the bug.</li>
-                    <li><strong>Analytics:</strong> We collect anonymous information about which features are most used to help us improve the app.</li>
+                    <li><strong>Analytics:</strong> We collect anonymous information about which features are most used (e.g., "User opened Template X") to help us improve the app.</li>
                 </ul>
 
                 <h2>3. Data Retention and Control</h2>
-                <p><strong>Firestore Database:</strong> We store your anonymous credit balance and project metadata in a secure database to enable cross-device sync. You can request the deletion of your account and associated data at any time by contacting us.</p>
+                <p><strong>Firestore Database:</strong> We store your anonymous credit balance and project metadata in a secure database to enable cross-device sync.</p>
+                <p><strong>Data Deletion:</strong> You can request the deletion of your account and associated data at any time by contacting us.</p>
 
                 <h2>4. Choice and Consent</h2>
                 <ul>
@@ -290,29 +239,115 @@
             </div>
         </div>
 
+        <!-- TURKISH CONTENT -->
+        <div id="tr" class="content-section active">
+            <div class="header">
+                <h1>Yada Studio Gizlilik Politikası</h1>
+                <p class="date">Yürürlük Tarihi: 16 Nisan 2026</p>
+            </div>
+            <div class="card">
+                <p><strong>Yada Studio</strong>'da gizliliğiniz bizim en önemli önceliğimizdir. Yada Studio'yu "Önce Gizlilik" prensibiyle tasarladık; yani size yüksek kalitede ekran görüntüsü oluşturma ve App Store senkronizasyonu deneyimi sunmak için yalnızca gerekli olan minimum bilgiyi topluyoruz.</p>
+
+                <h2>1. Sıfır Takip Taahhüdü</h2>
+                <p>Sizi reklam amaçlı takip <strong>etmiyoruz</strong>. Verilerinizi reklam verenlerle veya veri simsarlarıyla paylaşmadığımız için Uygulama Takip Şeffaflığı (ATT) özelliğini kullanmıyoruz. Yada Studio içindeki aktiviteleriniz size özel kalır.</p>
+
+                <h2>2. Topladığımız Bilgiler ve Nedenleri</h2>
+                
+                <h3>a. App Store Connect Kimlik Bilgileri</h3>
+                <p>"App Store'a Senkronize Et" özelliğini kullanmak için App Store Connect API Issuer ID, Key ID ve Özel Anahtarınızı sağlarsınız.</p>
+                <ul>
+                    <li><strong>Kullanım:</strong> Bu kimlik bilgileri yalnızca Apple'ın resmi API'si ile iletişim kurmak için kullanılır.</li>
+                    <li><strong>Güvenlik:</strong> Cihazınızın güvenli <strong>Keychain (Anahtar Zinciri)</strong> alanında saklanır. Sunucularımıza veya herhangi bir üçüncü tarafa <strong>asla</strong> gönderilmez.</li>
+                </ul>
+
+                <h3>b. Tanımlayıcılar (Hesap Senkronizasyonu)</h3>
+                <p>Kişisel <strong>iCloud</strong> hesabınız üzerinden senkronize edilen benzersiz, anonim bir Kullanıcı Kimliği (örneğin user_12345) oluştururuz.</p>
+                <ul>
+                    <li><strong>Amaç:</strong> Bu, Pro durumunuzun, kredilerinizin ve proje meta verilerinizin iPhone, iPad ve Mac cihazlarınız arasında senkronize kalmasını sağlar.</li>
+                </ul>
+
+                <h3>c. Yapay Zeka Servisleri (Arka Planlar ve Meta Veriler)</h3>
+                <p>AI özelliklerini (Arka Plan Oluşturucu veya Meta Veri Asistanı) kullandığınızda:</p>
+                <ul>
+                    <li><strong>Gönderilen Veriler:</strong> Güvenli işleme sunucularımıza (<strong>Google Gemini AI</strong> destekli) yalnızca metin komutunuzu ve Kullanıcı Kimliğinizi göndeririz.</li>
+                    <li><strong>Fotoğraf Yükleme Yok:</strong> Fotoğraflarınızı veya ekran görüntülerinizi AI sunucularımıza <strong>yüklemiyoruz</strong>. AI, tamamen sağladığınız metin açıklamalarına dayanarak görseller ve içerik üretir.</li>
+                </ul>
+
+                <h3>d. Satın Alma Geçmişi</h3>
+                <p>Abonelikleri yönetmek için <strong>RevenueCat</strong> kullanıyoruz. RevenueCat, Premium erişiminizin aktif olduğundan emin olmak için Apple'dan işlem tanımlayıcılarını toplar. Bu veriler anonim Kullanıcı Kimliğinize bağlıdır.</p>
+
+                <h3>e. Tanılama ve Analiz</h3>
+                <p>Uygulama kararlılığını artırmak için <strong>Firebase (Google)</strong> kullanıyoruz:</p>
+                <ul>
+                    <li><strong>Crashlytics:</strong> Uygulama çökerse, hatayı düzeltmemize yardımcı olacak teknik bir günlük gönderilir.</li>
+                    <li><strong>Analizler:</strong> Hangi özelliklerin daha çok kullanıldığına dair (örneğin "Kullanıcı X şablonunu açtı") anonim bilgiler toplarız.</li>
+                </ul>
+
+                <h2>3. Veri Saklama ve Kontrol</h2>
+                <p><strong>Firestore Veritabanı:</strong> Anonim kredi bakiyenizi ve proje meta verilerinizi cihazlar arası senkronizasyonu sağlamak için güvenli bir veritabanında saklıyoruz.</p>
+                <p><strong>Veri Silme:</strong> Hesabınızın ve ilişkili verilerinizin silinmesini istediğiniz zaman bizimle iletişime geçerek talep edebilirsiniz.</p>
+
+                <h2>4. Seçim ve Rıza</h2>
+                <ul>
+                    <li><strong>Fotoğraf Kitaplığı:</strong> Erişim yalnızca bir arka planı içe aktarmayı veya bitmiş bir tasarımı dışa aktarmayı seçtiğinizde kullanılır.</li>
+                    <li><strong>App Store Connect:</strong> API kimlik bilgilerinizi istediğiniz zaman uygulamadan kaldırabilirsiniz; bu, tüm senkronizasyon özelliklerini anında durduracaktır.</li>
+                </ul>
+
+                <h2>5. İletişim</h2>
+                <p>Bu gizlilik politikası veya verilerinizle ilgili herhangi bir sorunuz varsa, lütfen bize şu adresten ulaşın: <a href="mailto:yadatechnologiesofficial@gmail.com" style="color: var(--accent-color); text-decoration: none;">yadatechnologiesofficial@gmail.com</a></p>
+            </div>
+        </div>
+
         <!-- GERMAN CONTENT -->
         <div id="de" class="content-section">
             <div class="header">
-                <h1>Datenschutzerklärung</h1>
+                <h1>Datenschutzerklärung für Yada Studio</h1>
                 <p class="date">Gültig ab: 16. April 2026</p>
             </div>
             <div class="card">
-                <p>Bei <strong>Yada Studio</strong> hat Ihre Privatsphäre höchste Priorität. Wir haben Yada Studio als "Privacy First"-Anwendung entwickelt.</p>
+                <p>Bei <strong>Yada Studio</strong> hat Ihre Privatsphäre höchste Priorität. Wir haben Yada Studio als „Privacy First“-Anwendung entwickelt. Das bedeutet, dass wir nur die minimal notwendigen Informationen sammeln, um Ihnen eine hochwertige Erstellung von Screenshots und eine Synchronisierung mit dem App Store zu ermöglichen.</p>
 
-                <h2>1. Kein Tracking-Versprechen</h2>
-                <p>Wir verfolgen Sie nicht zu Werbezwecken. Wir geben Ihre Daten nicht an Werbetreibende weiter.</p>
+                <h2>1. Null-Tracking-Zusage</h2>
+                <p>Wir verfolgen Sie <strong>nicht</strong> zu Werbezwecken. Wir geben Ihre Daten nicht an Werbetreibende oder Datenhändler weiter. Ihre Aktivitäten innerhalb von Yada Studio bleiben privat.</p>
 
-                <h2>2. Informationen, die wir sammeln</h2>
-                <h3>a. App Store Connect Zugangsdaten</h3>
-                <p>Diese werden ausschließlich lokal im <strong>Keychain</strong> Ihres Geräts gespeichert.</p>
+                <h2>2. Informationen, die wir sammeln und warum</h2>
                 
-                <h3>b. Identifikatoren</h3>
-                <p>Eine anonyme Benutzer-ID wird über Ihren <strong>iCloud</strong>-Account synchronisiert.</p>
+                <h3>a. App Store Connect Anmeldedaten</h3>
+                <p>Um die Funktion „Mit App Store synchronisieren“ zu nutzen, geben Sie Ihre App Store Connect API-Issuer-ID, Key-ID und den privaten Schlüssel an.</p>
+                <ul>
+                    <li><strong>Verwendung:</strong> Diese Anmeldedaten werden ausschließlich zur Kommunikation mit der offiziellen API von Apple verwendet.</li>
+                    <li><strong>Sicherheit:</strong> Sie werden sicher im <strong>Keychain</strong> Ihres Geräts gespeichert und <strong>niemals</strong> an unsere Server oder Dritte gesendet.</li>
+                </ul>
 
-                <h3>c. KI-Dienste</h3>
-                <p>Wir senden nur Text-Prompts an <strong>Google Gemini AI</strong>. Wir laden keine Fotos auf KI-Server hoch.</p>
+                <h3>b. Identifikatoren (Konto-Synchronisierung)</h3>
+                <p>Wir generieren eine eindeutige, anonyme Benutzer-ID, die über Ihren persönlichen <strong>iCloud</strong>-Account synchronisiert wird.</p>
+                <ul>
+                    <li><strong>Zweck:</strong> Dies ermöglicht es, dass Ihr Pro-Status, Ihre Credits und Projekt-Metadaten auf Ihrem iPhone, iPad und Mac synchronisiert bleiben.</li>
+                </ul>
 
-                <h2>3. Kontakt</h2>
+                <h3>c. KI-Dienste (Hintergründe & Metadaten)</h3>
+                <p>Wenn Sie KI-Funktionen nutzen:</p>
+                <ul>
+                    <li><strong>Gesendete Daten:</strong> Wir senden nur Ihren Text-Prompt und Ihre Benutzer-ID an unsere sicheren Server (betrieben mit <strong>Google Gemini AI</strong>).</li>
+                    <li><strong>Keine Foto-Uploads:</strong> Wir laden Ihre Fotos oder Screenshots <strong>nicht</strong> auf unsere KI-Server hoch. Die KI generiert Bilder und Inhalte ausschließlich basierend auf den von Ihnen bereitgestellten Textbeschreibungen.</li>
+                </ul>
+
+                <h3>d. Kaufverlauf</h3>
+                <p>Wir verwenden <strong>RevenueCat</strong> zur Verwaltung von Abonnements. Diese Daten sind mit Ihrer anonymen Benutzer-ID verknüpft.</p>
+
+                <h3>e. Diagnose & Analysen</h3>
+                <p>Wir nutzen <strong>Firebase (Google)</strong>, um die Stabilität der App zu verbessern (Crashlytics und anonyme Nutzungsanalysen).</p>
+
+                <h2>3. Datenspeicherung und Kontrolle</h2>
+                <p><strong>Firestore-Datenbank:</strong> Wir speichern Ihr anonymes Credit-Guthaben und Projekt-Metadaten in einer sicheren Datenbank, um die geräteübergreifende Synchronisierung zu ermöglichen. Sie können die Löschung Ihrer Daten jederzeit beantragen.</p>
+
+                <h2>4. Wahlmöglichkeit und Zustimmung</h2>
+                <ul>
+                    <li><strong>Fotomediathek:</strong> Der Zugriff wird nur verwendet, wenn Sie einen Hintergrund importieren oder ein fertiges Design exportieren möchten.</li>
+                    <li><strong>App Store Connect:</strong> Sie können Ihre API-Anmeldedaten jederzeit aus der App entfernen.</li>
+                </ul>
+
+                <h2>5. Kontakt</h2>
                 <p>Fragen? Kontaktieren Sie uns unter: <a href="mailto:yadatechnologiesofficial@gmail.com" style="color: var(--accent-color); text-decoration: none;">yadatechnologiesofficial@gmail.com</a></p>
             </div>
         </div>
@@ -335,7 +370,7 @@
 
             const backBtn = document.getElementById('backBtn');
             if(lang === 'tr') backBtn.innerText = "Ana Sayfaya Dön";
-            else if(lang === 'de') backBtn.innerText = "Zurück";
+            else if(lang === 'de') backBtn.innerText = "Zurück zur Startseite";
             else backBtn.innerText = "Back to Home";
         }
 
@@ -346,5 +381,6 @@
             else setLang('en');
         };
     </script>
+
 </body>
 </html>
