@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Yada Studio Help Center</title>
+    <link rel="icon" href="logo.png">
+
+    <style>
+        :root {
+            --bg-color: #F2F2F7;
+            --text-primary: #1C1C1E;
+            --text-secondary: #8E8E93;
+            --card-bg: #FFFFFF;
+            --accent-color: #007AFF;
+            --border-color: #E5E5EA;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --radius: 18px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #000000;
+                --text-primary: #FFFFFF;
+                --text-secondary: #98989D;
+                --card-bg: #1C1C1E;
+                --accent-color: #0A84FF;
+                --border-color: #38383A;
+                --shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 700px;
+            padding: 60px 0;
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background-color: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        img.app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 26px;
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+
+        p.hero-text {
+            font-size: 19px;
+            color: var(--text-secondary);
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 30px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+            animation: fadeIn 0.5s ease;
+        }
+
+        h2.section-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 16px 0;
+        }
+
+        .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .faq-item:first-child { padding-top: 0; }
+
+        details summary {
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-primary);
+        }
+
+        details summary:after {
+            content: '+';
+            font-size: 24px;
+            font-weight: 300;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary:after { transform: rotate(45deg); }
+
+        details p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin: 12px 0 0 0;
+            line-height: 1.5;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        .contact-box { text-align: center; padding: 40px 20px; }
+        .contact-box h3 { margin-top: 0; font-size: 20px; }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            font-size: 17px;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: transform 0.2s, opacity 0.2s;
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+        }
+
+        .btn-primary:active { transform: scale(0.96); opacity: 0.9; }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        .footer a { color: var(--text-secondary); text-decoration: none; margin: 0 10px; }
+
+        .content-section { display: none; }
+        .content-section.active { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="setLang('tr')">Türkçe</button>
+            <button class="lang-btn" onclick="setLang('en')">English</button>
+            <button class="lang-btn" onclick="setLang('de')">Deutsch</button>
+        </div>
+
+        <div class="hero">
+            <img src="logo.png" alt="Yada Studio App Icon" class="app-icon">
+        </div>
+
+        <!-- TURKISH CONTENT -->
+        <div id="tr" class="content-section active">
+            <div class="hero" style="margin-bottom: 0; margin-top: -30px;">
+                <h1>Yada Studio Destek</h1>
+                <p class="hero-text">Ekran görüntülerinizi zirveye taşıyalım.</p>
+            </div>
+            <br><br>
+            <div class="card">
+                <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+                <div class="faq-item">
+                    <details>
+                        <summary>App Store Connect senkronizasyonu güvenli mi?</summary>
+                        <p>Evet. API anahtarlarınız sadece cihazınızın güvenli Keychain alanında saklanır. Sunucularımıza asla iletilmez.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary>AI arka plan oluşturucu nasıl çalışır?</summary>
+                        <p>Yazdığınız metin açıklamaları Google Gemini AI tarafından işlenir. Kendi ekran görüntülerinizi sunucularımıza yüklemeden sadece metin üzerinden tasarım üretilir.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary>Aboneliğim cihazlar arasında senkronize olur mu?</summary>
+                        <p>Evet, iCloud hesabınız sayesinde Pro durumunuz iPhone, iPad ve Mac cihazlarınız arasında otomatik olarak senkronize edilir.</p>
+                    </details>
+                </div>
+            </div>
+            <div class="card contact-box">
+                <h3>Yardıma mı ihtiyacınız var?</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 0;">Sorularınız için bizimle iletişime geçin.</p>
+                <a href="mailto:yadatechnologiesofficial@gmail.com?subject=Yada%20Studio%20Destek" class="btn-primary">Bize Ulaşın</a>
+            </div>
+        </div>
+
+        <!-- ENGLISH CONTENT -->
+        <div id="en" class="content-section">
+            <div class="hero" style="margin-bottom: 0; margin-top: -30px;">
+                <h1>Yada Studio Support</h1>
+                <p class="hero-text">Let's elevate your app screenshots.</p>
+            </div>
+            <br><br>
+            <div class="card">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <details>
+                        <summary>Is App Store Connect sync safe?</summary>
+                        <p>Yes. Your API credentials are stored exclusively in your device's secure Keychain. They are never sent to our servers.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary>How does the AI Background generator work?</summary>
+                        <p>Your text prompts are processed by Google Gemini AI. We do not upload your screenshots to our servers; the AI works based solely on your descriptions.</p>
+                    </details>
+                </div>
+            </div>
+            <div class="card contact-box">
+                <h3>Have another question?</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 0;">Our team is happy to help you.</p>
+                <a href="mailto:yadatechnologiesofficial@gmail.com?subject=Yada%20Studio%20Support" class="btn-primary">Contact Us</a>
+            </div>
+        </div>
+
+        <!-- GERMAN CONTENT -->
+        <div id="de" class="content-section">
+            <div class="hero" style="margin-bottom: 0; margin-top: -30px;">
+                <h1>Yada Studio Support</h1>
+                <p class="hero-text">Wir helfen Ihnen bei Ihren App-Screenshots.</p>
+            </div>
+            <br><br>
+            <div class="card">
+                <h2 class="section-title">Häufig gestellte Fragen</h2>
+                <div class="faq-item">
+                    <details>
+                        <summary>Ist die App Store Connect Synchronisierung sicher?</summary>
+                        <p>Ja. Ihre API-Zugangsdaten werden ausschließlich im sicheren Keychain Ihres Geräts gespeichert.</p>
+                    </details>
+                </div>
+            </div>
+            <div class="card contact-box">
+                <h3>Haben Sie weitere Fragen?</h3>
+                <a href="mailto:yadatechnologiesofficial@gmail.com?subject=Yada%20Studio%20Support" class="btn-primary">Kontaktieren Sie uns</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Yada Studio. Developed by Alper Duman.</p>
+            <p><a href="privacy.html">Privacy Policy</a> • <a href="mailto:yadatechnologiesofficial@gmail.com">Contact</a></p>
+        </div>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.querySelectorAll('.content-section').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+            const btns = document.querySelectorAll('.lang-btn');
+            if (lang === 'tr') btns[0].classList.add('active');
+            else if (lang === 'en') btns[1].classList.add('active');
+            else if (lang === 'de') btns[2].classList.add('active');
+        }
+
+        window.onload = function() {
+            const userLang = navigator.language || navigator.userLanguage; 
+            if (userLang.startsWith('de')) setLang('de');
+            else if (userLang.startsWith('tr')) setLang('tr');
+            else setLang('en');
+        };
+    </script>
+</body>
+</html>
